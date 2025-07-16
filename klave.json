@@ -1,0 +1,14 @@
+{
+    "version": "1",
+    "branches": [
+        "*"
+    ],
+    "applications": [
+        {
+            "slug": "mcp_client",
+            "description": "MCP Client",
+            "version": "0.0.1",
+            "rootDir": "/apps/mcp_client"
+        }
+    ]
+}

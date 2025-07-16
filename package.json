@@ -1,0 +1,20 @@
+{
+    "name": "mcp_client",
+    "version": "0.0.1",
+    "description": "MCP Client",
+    "repository": "https://github.com/edwardbr/mcp_client",
+    "license": "MIT",
+    "author": "Edward Boggis-Rolfe <edward@secretarium.org> (https://github.com/edwardbr)",
+    "scripts": {
+        "build": "stac ."
+    },
+    "devDependencies": {
+        "@klave/sdk": "0.17.0-dev.8",
+        "as-base64": "0.2.0",
+        "assemblyscript": "^0.27.31",
+        "path-complete-extname": "1.0.0",
+        "tslib": "^2.8.1",
+        "visitor-as": "^0.11.4",
+        "zod": "^3.23.8"
+    }
+}
