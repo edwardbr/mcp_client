@@ -1,4 +1,4 @@
-import { Notifier, LLM, Context, Crypto, HTTP, HttpRequest } from "@klave/sdk/assembly";
+import { Notifier, LLM, Context, Crypto, HTTP, HttpRequest, Ledger } from "@klave/sdk/assembly";
 import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage, GraphLoadInput, GraphInitExecutionContextInput, InferenceAddPromptInput, ContextNameInput, InferenceComputeInput, InferenceOutput, InferenceAddFrameInput, InferenceGetPiecesInput} from "./types";
 
 const myTableName = "my_storage_table";
