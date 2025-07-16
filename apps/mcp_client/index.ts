@@ -1,5 +1,5 @@
 import { Notifier, LLM, Context, Crypto, HTTP, HttpRequest, Ledger } from "@klave/sdk/assembly";
-import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage, GraphLoadInput, GraphInitExecutionContextInput, InferenceAddPromptInput, ContextNameInput, InferenceComputeInput, InferenceOutput, InferenceAddFrameInput, InferenceGetPiecesInput} from "./types";
+import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage} from "./types";
 
 const myTableName = "my_storage_table";
 
@@ -9,8 +9,6 @@ const myTableName = "my_storage_table";
  */
 export function fetchValue(input: FetchInput): void {
 
-
-// HTTP.requestJson(query: HttpRequest) : void {
     let value = Ledger.getTable(myTableName).get(input.key);
     if (value.length === 0) {
         Notifier.sendJson<ErrorMessage>({
