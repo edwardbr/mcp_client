@@ -60,8 +60,8 @@ export function generate(): void {
         port: 8002,
         method: 'POST',
         path: '/generate',
-        version: '1.1',
-        headers: [['Content-Type', 'application/json']],
+        version: 'HTTP/1.1',
+        headers: [],
         body: `{
                     "prompt": "Explain containerization:",
                     "max_tokens": 100
