@@ -1,5 +1,5 @@
 import { Notifier, LLM, Context, Crypto, HTTP, HttpRequest, Ledger } from "@klave/sdk/assembly";
-import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage} from "./types";
+import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage, Notification} from "./types";
 
 const myTableName = "my_storage_table";
 
@@ -9,9 +9,8 @@ const myTableName = "my_storage_table";
  */
 export function fetchValue(input: FetchInput): void {
     
-    Notifier.sendJson<ErrorMessage>({
-        success: false,
-        message: `cooiey`
+    Notifier.sendJson<Notification>({
+        message: 'coooie'
     });
 
 
