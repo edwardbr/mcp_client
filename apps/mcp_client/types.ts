@@ -27,3 +27,9 @@ export class StoreInput {
 export class StoreOutput {
     success!: boolean;
 }
+
+
+@json
+export class Notification {
+  message!: string;
+}
