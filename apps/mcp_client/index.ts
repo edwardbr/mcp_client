@@ -86,3 +86,39 @@ export function generate(): void {
         notify: response.body
     });
 }
+
+
+
+/**
+ * @transaction
+ * @param {StoreInput} input - A parsed input argument
+ */
+export function foo(): void {
+    const query: HttpRequest = {
+        hostname: '195.49.74.29',
+        port: 8002,
+        method: 'GET',
+        path: '/generate',
+        version: 'HTTP/1.1',
+        headers: [],
+        body: `{}
+                `
+    };
+
+    Notifier.sendJson<HttpRequest>(
+        query
+    );
+
+    const response = HTTP.request(query);
+    if (!response) {
+        Notifier.sendJson<ErrorMessage>({
+            success: false,
+            message: `HTTP call went wrong !`
+        });
+        return;
+    }
+
+    Notifier.sendJson<Notification>({
+        notify: response.body
+    });
+}
