@@ -1,5 +1,5 @@
-import { Notifier, LLM, Context, Crypto, JSON, HTTP, HttpRequest, Ledger } from "@klave/sdk/assembly";
-import {FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage, Notification} from "./types";
+import { Notifier, LLM, Context, Crypto, JSON, HTTP, HttpRequest, HttpResponse, Ledger } from "@klave/sdk/assembly";
+import { FetchInput, FetchOutput, StoreInput, StoreOutput, ErrorMessage, Notification } from "./types";
 
 const myTableName = "my_storage_table";
 
@@ -8,7 +8,7 @@ const myTableName = "my_storage_table";
  * @param {FetchInput} input - A parsed input argument
  */
 export function fetchValue(input: FetchInput): void {
-    
+
     Notifier.sendJson<Notification>({
         notify: 'coooie'
     });
@@ -56,7 +56,7 @@ export function storeValue(input: StoreInput): void {
  */
 export function generate(): void {
     const query: HttpRequest = {
-        hostname: 'http://195.49.74.29:8002',
+        hostname: 'https://195.49.74.29:8002',
         port: 443,
         method: 'post',
         path: '/generate',
