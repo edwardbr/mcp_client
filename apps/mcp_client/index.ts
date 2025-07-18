@@ -8,6 +8,12 @@ const myTableName = "my_storage_table";
  * @param {FetchInput} input - A parsed input argument
  */
 export function fetchValue(input: FetchInput): void {
+    
+    Notifier.sendJson<ErrorMessage>({
+        success: false,
+        message: `cooiey`
+    });
+
 
     let value = Ledger.getTable(myTableName).get(input.key);
     if (value.length === 0) {
