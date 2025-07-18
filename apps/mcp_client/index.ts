@@ -56,9 +56,9 @@ export function storeValue(input: StoreInput): void {
  */
 export function generate(): void {
     const query: HttpRequest = {
-        hostname: 'https://195.49.74.29:8002',
-        port: 443,
-        method: 'post',
+        hostname: '195.49.74.29',
+        port: 8002,
+        method: 'POST',
         path: '/generate',
         version: '1.1',
         headers: [['Content-Type', 'application/json']],
