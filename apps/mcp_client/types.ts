@@ -31,5 +31,5 @@ export class StoreOutput {
 
 @json
 export class Notification {
-  message!: string;
+  notify!: string;
 }
