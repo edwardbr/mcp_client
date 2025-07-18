@@ -69,6 +69,10 @@ export function generate(): void {
                 `
     };
 
+    Notifier.sendJson<HttpRequest>(
+        query
+    );
+
     const response = HTTP.request(query);
     if (!response) {
         Notifier.sendJson<ErrorMessage>({
