@@ -51,7 +51,7 @@ export function storeValue(input: StoreInput): void {
 
 
 /**
- * @transaction
+ * @query
  * @param {StoreInput} input - A parsed input argument
  */
 export function generate(): void {
@@ -90,7 +90,7 @@ export function generate(): void {
 
 
 /**
- * @transaction
+ * @query
  * @param {StoreInput} input - A parsed input argument
  */
 export function foo(): void {
